@@ -1,0 +1,17 @@
+[
+ {
+   "pk": 1,
+   "model": "auth.user",
+   "fields": {
+              "username": "admin",
+              "first_name": "Bruce", "last_name": "Wayne", "is_active": true, "is_superuser": true, "is_staff": true, "last_login": "2012-01-04 16:44:33", "groups": [], "user_permissions": [], "password": "sha1$bf1f4$90659dd0ca8b66fb5947ebe059a3b89c28572aad", "email": "admin@admin.admin", "date_joined": "2012-01-04 16:44:33"
+             }
+ },{
+    "pk": "c2d5a77df726599018a40940d7726804",
+    "model": "sessions.session",
+    "fields": {
+      "expire_date": "2112-01-18 17:36:00",
+      "session_data": "gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUhZ2Vvbm9kZS5jb3JlLmF1dGguR3JhbnVsYXJC\nYWNrZW5kcQNVDV9hdXRoX3VzZXJfaWRxBEsBdS45OGU2Zjk1MDUwYTFiZDYzOWZmODU1NmExZGJm\nMDEyNw==\n"
+    }
+  }
+]

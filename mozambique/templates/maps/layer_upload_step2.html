@@ -1,0 +1,192 @@
+{% extends "maps/data_base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "Upload Layer Step 2" %} - {{ block.super }} {% endblock %}
+
+{% block head %}
+<style>
+    .formSection {
+        margin-bottom: 1em;
+    }
+    .right input, .right select {
+    }
+    .left input {
+        line-height: 2em;
+    }
+    form input, form select {
+        font-size: small;
+    }
+    form label {
+        line-height: 2em;
+    }
+    .clearfix:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    .clearfix {
+      display: inline-block;
+    }
+    * html .clearfix {
+      height: 1%;
+    } /* Hides from IE-mac \*/
+    .clearfix {
+      display: block;
+    }
+    #format_input input {
+        width:8em;
+    }
+
+</style>
+{% include "geonode/ext_header.html" %}
+{{ block.super }}
+{% endblock %}
+{% block main %}
+<div class="twocol">
+  <h2> {% trans "Editing details for " %} {{ layer_name }} </h2>
+
+  <form method="POST" id="timeForm">
+      
+  {% if missing_crs %}
+  <h3>Coordinate Reference System</h3>
+  <p>A coordinate reference system for this layer could not be determined.
+  Locate or enter the appropriate ESPG code for this layer below.
+  One way to do this is do visit: <a href="http://prj2epsg.org/search" target="_">prj2epsg</a> and enter the following:
+  </p>
+  <pre>
+  {{ native_crs }}
+  </pre>
+  <label for="srs">EPSG Code  :</label><input type="text" name="srs">
+  {% endif %}
+
+  <h3>Time Options</h3>
+    {% csrf_token %}
+    
+    <h4>Choose time attribute:</h4>
+    <div class="formSection clearfix" title="Map animations will not be enabled">
+        <input type="radio" name="timetype" checked="checked" id="notime">
+        <label for="notime">{% trans "This data does not have a time attribute" %}</label>
+    </div>
+    {% if time_form.time_attribute %}
+    <div class="formSection clearfix right" title="Use an existing timestamp attribute in the data">
+        <input type="radio" name="timetype" id="existing">
+        <label for="existing">{% trans "Existing Time Attribute" %}  :</label>{{ time_form.time_attribute }}
+    </div>
+    {% endif %}
+    {% if time_form.text_attribute %}
+    <div class="formSection clearfix right" title="Convert text in the data to a timestamp using standard date/time representation or a custom format">
+        <input type="radio" name="timetype" id="textattribute">
+        <label for="textattribute">{% trans "Convert Text Attribute" %}  :</label>{{ time_form.text_attribute }}
+        <label for="format_select">{% trans "Date Format" %}  :
+        <select id="format_select">
+            <option selected="true" value="0">Best Guess</option>
+            <option value="1">Custom</option>
+        </select>
+        <div id="format_input" style="display: inline; visibility: hidden;" class="clearfix">
+            {{ time_form.text_attribute_format }}
+        </div>
+    </div>
+    {% endif %}
+    {% if time_form.year_attribute %}
+    <div class="formSection clearfix right" title="Convert a number field into a year">
+        <input type="radio" name="timetype" id="convertnumber">
+        <label for="convertnumber">{% trans "Convert Number (As Year)" %}  :</label>{{ time_form.year_attribute }}
+    </div>
+    {% endif %}
+
+    <div id="presentation" class="formSection left">
+        <h4>Present time attribute as:</h4>
+        <div>
+            <input id="LIST" type='radio' value='LIST' checked='checked' name='presentation_strategy'/>
+            <label for="LIST"><strong>List</strong> of all the distinct time values</label>
+        </div>
+        <div>
+            <input id="DISCRETE_INTERVAL" type='radio' value='DISCRETE_INTERVAL' name='presentation_strategy'/>
+            <label for="DISCRETE_INTERVAL"><strong>Intervals</strong> defined by the resolution</label>
+        </div>
+        <div>
+            <input id="CONTINUOUS_INTERVAL" type='radio' value='CONTINUOUS_INTERVAL' name='presentation_strategy'/>
+            <label for="CONTINUOUS_INTERVAL"><strong>Continuous Intervals</strong> for data that is frequently updated, resolution describes the frequency of updates</label>
+        </div>
+        
+        <div id="precision" style="display:none">
+            <p><strong>Resolution of time attribute: <input type="text" name="precision_value" size="3"/>
+            {{ time_form.precision_step }}
+            </p>
+        </div>
+    </div>
+    
+    <input type="submit" value="{% trans "Next" %}"/>
+  </form>
+</div>
+<script type="text/javascript">
+{% autoescape off %}
+Ext.onReady(function() {
+    Ext.QuickTips.init(); 
+    var precision = Ext.get('precision'), 
+        format = Ext.get('format_input'),
+        presentation = Ext.get('presentation');
+    presentation.hide();
+    precision.hide();
+    format.hide();
+
+    function resetSelects(exclude) {
+        Ext.select("#timeForm select").each(function(e,i) {
+            if (e.dom != exclude) {
+                e.dom.value = "";
+            }
+        });
+    }
+
+    // show presentation section if needed and select first attribute
+    Ext.get(Ext.query("input[name=timetype]")).on('click',function() {
+        if (!Ext.get("notime").dom.checked) {
+            if (! presentation.isVisible()) {
+                presentation.fadeIn();
+            }
+        } else {
+            presentation.hide();
+        }
+        var select = Ext.get(this).parent().first("select");
+        resetSelects();
+        if (select) {
+            select.dom.value = select.dom.options[1].value;
+        }
+    });
+    // only show the precision section if needed
+    Ext.get(Ext.query("input[name=presentation_strategy]")).on('click',function() {
+        if (!Ext.query("input[value=LIST]")[0].checked) {
+            if (!precision.isVisible()) {
+                precision.fadeIn();
+            }
+        } else{
+            precision.hide();
+        }
+    });
+    // sync radio button selection with attribute selectors
+    Ext.select("#timeForm select").on('change',function() {
+        if (this.id == 'format_select') return;
+        if (this.value != "") {
+            Ext.get(this).parent(".formSection").first().dom.click();
+            resetSelects(this);
+        } else {
+            Ext.get("notime").dom.click();
+        }
+    });
+    // show custom format field if needed
+    Ext.get('format_select').on('change',function() {
+        var input = Ext.get("id_text_attribute_format");
+        if (this.getAttribute('value') == '0') {
+            format.hide();
+            input.dom.value = '';
+        } else {
+            format.fadeIn();
+            input.focus();
+        }
+    });
+});
+{% endautoescape %}
+</script>
+{% endblock %}

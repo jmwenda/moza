@@ -1,0 +1,309 @@
+{% load i18n %}
+{% load avatar_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>{% block title %} {{ SITENAME }} {% endblock %}</title>
+  <link rel="shortcut icon" href="{{ STATIC_URL }}theme/img/favicon.ico"/>
+  {% block head %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}theme/bootstrap.css">
+  
+ <style>
+    .container-fluid > .sidebar {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 320px;
+   }
+
+   #account-menu{
+      margin-left: 30px;
+      border-left: 1px black solid;
+      border-right: 1px black solid;
+   }
+
+   #login-form {
+      padding-left: 10px;
+      border-left: 1px black solid;
+   }
+
+    .container-fluid > .content {
+      margin-left: 340px;
+    }
+
+   select#langval{
+     width: 100px;
+   }
+   .topbar{
+     clear: both;
+   }
+   #main{
+     clear: both;
+   }
+
+     /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+ 
+      .footer {
+         border: none;
+      }
+      body {
+        padding-top: 94px; /* 40px to make the container go all the way to the bottom of the topbar */
+      }
+      .container > footer p {
+        text-align: center; /* center align it with the container */
+      }
+
+      /* The white background content wrapper */
+      .content {
+      }
+
+      /* Page header tweaks */
+      .page-header {
+        background-color: #f5f5f5;
+        padding: 20px 20px 10px;
+        margin: -20px -20px 20px;
+      }
+
+/* Fixes for compatibility issues between extjs and bootstrap */
+
+.x-panel table, .x-window table {
+  margin: 0;
+  padding: 0;
+  border-top: none;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  width: auto;
+}
+
+.x-panel td, .x-panel th, .x-window td, .x-window th{
+  border-top: none;
+  margin: 0; 
+  padding: 0;
+}
+/*
+.x-panel-header {
+  background:transparent;
+  text-align: center;
+  border-color: none;
+}
+*/
+.x-panel-body {
+  border: none;
+  list-style:none;
+}
+.x-panel-body ul{
+list-style:none;
+}
+ /*
+.x-toolbar {
+  border: none;
+  background: transparent;
+}
+
+.x-panel ul, .x-panel ol, .x-window ul, .xwindow ol {
+  margin: 0;
+}
+*/
+/*
+ul.x-tab-strip li {
+  background: black;
+  color: white;
+}
+
+.x-tab-strip-top .x-tab-right, .x-tab-strip-top .x-tab-left, .x-tab-strip-top .x-tab-strip-inner {
+background-image: none;
+background: none;
+color: white;
+}
+
+.x-tab-strip-active span.x-tab-strip-text {
+  background: black;
+  color: white;
+}
+
+.x-tab-strip span.x-tab-strip-text {
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.x-tab-strip {
+  border-bottom-width: 0;
+}
+
+ul.x-tab-strip-top {
+    border-bottom-color: red;
+    border-bottom-width: 0;
+}
+
+.x-panel-tbar-noheader .x-toolbar, .x-panel-mc .x-panel-tbar .x-toolbar {
+    border-width: 0;
+}
+
+.x-panel-noborder .x-panel-bbar-noborder .x-toolbar {
+    border-width: 0;
+}
+*/
+/*
+.x-grid3-cell-inner, .x-grid3-hd-inner{
+  height: 30px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+*/
+.x-grid3-hd-inner{
+height:20px;
+font-size: 14px;
+}
+.x-grid3-cell-inner{
+height:20px;
+font-size: 14px;
+padding-top:5px;
+}
+.hero-unit h1{
+font-size:40px
+}
+/*
+.x-tab-strip-wrap {
+background: #404040;
+}
+.x-tab-strip-wrap ul {
+background: #404040;
+}
+.x-tab-strip-wrap ul li {
+color:white;
+background: #404040;
+}
+
+ul.x-tab-strip li {
+margin-left: 0;
+}
+
+.x-tab-strip-top .x-tab-right {
+padding-left: 0;
+border-bottom: none;
+}
+
+.x-panel-noborder .x-panel-tbar-noborder .x-toolbar {
+    border-width: 0;
+}
+
+.x-tab-panel-noborder .x-tab-panel-header-noborder {
+    border-width: 0;
+}
+*/
+</style>
+ {% endblock %}
+</head>
+<body>
+
+<!-- TOP -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="{% url index %}">
+            INGC :: {% trans "moz-adapt" %}</a>
+      <ul class="nav">
+        <!-- <li><a id="nav-vulnerability" href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></li> -->
+        <li><a id="nav-vulnerability" href="http://sdwebx.worldbank.org/climateportal/index.cfm?page=country_historical_climate&ThisRegion=Africa&ThisCCode=MOZ">{% trans "Vulnerability"%}</a></li>
+        <li><a id="nav-adaptation" href="{% url adaptation %}">{% trans "Adaptation" %}</a></li>
+        <li><a id="nav-resources" href="{% url resources %}">{% trans "Resources" %}</a></li>
+        <li><a id="nav-data" href="{% url search %}">{% trans "Data" %}</a></li>
+        <li><a id="nav-tools" href="{% url tools %}">{% trans "Tools" %}</a></li>
+
+        <li><a id="nav-about" href="{% url about %}">{% trans "About" %}</a></li>
+     </ul>
+ {% if csrf_token != "NOTPROVIDED"  %}
+   {% get_current_language as LANGUAGE %}
+    <form class="pull-right" id="target" action="/i18n/setlang/" method="post">
+      {% csrf_token %}
+         <select id="langval" name="language" onchange="javascript:form.submit()">
+           {% for lang in LANGUAGES %}
+            <option value="{{ lang.0 }}"
+                {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                {{ lang.1 }}
+            </option>
+           {% endfor %}
+         </select>
+     </form>
+  {% endif %}
+        {% if user.is_authenticated %}
+  <ul class="pull-right" id="account-menu">
+        <li class="dropdown" data-dropdown="dropdown">
+          <a href="#" class="dropdown-toggle">{{ user.first_name }} {{ user.last_name }}
+
+
+ {% avatar user 15 %}
+</a>
+          <ul class="dropdown-menu">
+            {% if user.is_staff %}
+            <li><a href="/data/upload">{% trans "Upload data" %}</a></li>
+            <li><a href="/rosetta/">{% trans "Translate site" %}</a></li>
+            <li><a href="/admin/">{% trans "Admin site" %}</a></li>
+            {% endif %}
+            <li><a href="{% if user.get_profile %}{{ user.get_profile.get_absolute_url }}{% else %}{% url profiles_create_profile %}{% endif %}">Edit profile</a></li>
+            <li><a href="{% url auth_password_change %}">{% trans "Change password" %}</a></li>
+            <li><a href="{% url auth_logout %}">{% trans "Log out" %}</a></li>
+          </ul>
+        <li>
+      </ul>
+        {% endif %}
+
+      {% if csrf_token != "NOTPROVIDED"  %}
+        {% if not user.is_authenticated %}
+        <form id="login-form" action="/accounts/login/" method="post" accept-charset="utf-8" class="pull-right span6">
+             <input class="input-small" type="text" name="username" placeholder="{% trans "Username" %} ">
+             <input class="input-small" type="password" name="password" placeholder="{% trans "Password" %}">
+             {% csrf_token %}
+             <button class="btn" type="submit">{% trans "Sign in" %}</button>
+        </form>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+<!-- END TOP -->
+
+<!-- MAIN -->
+{% block main %}
+<div id="main" class="container-fluid">
+<div class="sidebar">
+      {% block sidebar %}{% endblock %}
+ </div>
+ <div class="content">
+      {% block content %}{% endblock %}
+ </div>
+</div>
+{% endblock %}
+<!-- END MAIN -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+  {% block footer %}
+  <p class="pull-right">
+</p>
+  {% endblock %}
+ 
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- Le javascript -->
+<script src="{{ STATIC_URL }}script/jquery-1.5.2.min.js"></script>
+<script src="{{ STATIC_URL }}script/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
+<script type="text/javascript" src="{% url lang %}"></script>
+<script>
+   // Enable the dropdown
+   $('#topbar').dropdown();
+   // Set the css of the active tab
+   $('.nav>li>a').parent().removeClass('active');
+   $({% block active-tab %}'#nav-home'{% endblock %}).parent().addClass('active');
+</script>
+ 
+</body>
+</html>

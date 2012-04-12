@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block active-tab %}'#nav-resources'{% endblock %}
+
+{% block main %}
+<div id="main" class="container">
+  <div class="well">
+    <h1>{% trans "Resources" %}</h1>
+     <ul>
+       <li><a href="http://62.2.195.177/DesInventar/">{% trans "UNDP Mozambique in GripWeb" %}</a></li>
+     </ul> 
+     <p>Estudo sobre o Impacto das Mudanças Climáticas sobre Riscos de Catástrofes em Moçambique</p>
+     <ul><li><a href="http://share.maplecroft.com/INGC_Report/INGC_Main_Report_Portuguese_S0_All.pdf">Em Português</a></li><li><a href="http://share.maplecroft.com/INGC_Report/INGC_Main_Report_English_S0_All.pdf">Em Inglês</a></li></ul>   
+  </div>
+</div>
+{% endblock %}
+

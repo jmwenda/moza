@@ -1,0 +1,5 @@
+django-flatblocks
+django-rosetta
+django-modeltranslation
+django-staticfiles==1.0.1
+-e git+git://github.com/AIFDR/riab.git#egg=riab

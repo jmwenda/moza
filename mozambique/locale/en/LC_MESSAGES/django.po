@@ -1,0 +1,510 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-18 12:59-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/base.html:200
+msgid "Mozambique Adaptation"
+msgstr ""
+
+#: templates/base.html:202
+msgid "Vulnerability"
+msgstr ""
+
+#: templates/base.html:203
+msgid "Adaptation"
+msgstr ""
+
+#: templates/base.html:204 templates/index.html:46
+msgid "Resources"
+msgstr ""
+
+#: templates/base.html:205 templates/maps/layer.html:236
+msgid "Data"
+msgstr ""
+
+#: templates/base.html:206
+msgid "Tools"
+msgstr ""
+
+#: templates/base.html:208 templates/index.html:76
+msgid "About"
+msgstr ""
+
+#: templates/base.html:230
+msgid "Upload data"
+msgstr ""
+
+#: templates/base.html:231
+msgid "Translate site"
+msgstr ""
+
+#: templates/base.html:232
+msgid "Admin site"
+msgstr ""
+
+#: templates/base.html:235
+msgid "Change password"
+msgstr ""
+
+#: templates/base.html:236
+msgid "Log out"
+msgstr ""
+
+#: templates/base.html:245
+msgid "Username"
+msgstr ""
+
+#: templates/base.html:246
+msgid "Password"
+msgstr ""
+
+#: templates/base.html:248
+msgid "Sign in"
+msgstr ""
+
+#: templates/index.html:36
+msgid "Impacts and Vulnerability"
+msgstr ""
+
+#: templates/index.html:37
+msgid ""
+"Quickly explore climate projections, impacts and vulnerability information "
+"for your area"
+msgstr ""
+
+#: templates/index.html:38 templates/index.html.py:82
+msgid "Learn more"
+msgstr ""
+
+#: templates/index.html:41
+msgid "Adaptation and Opportunities"
+msgstr ""
+
+#: templates/index.html:42
+msgid "Learn and explore options to adapt to climate change"
+msgstr ""
+
+#: templates/index.html:47
+msgid "Information, Articles and Links"
+msgstr ""
+
+#: templates/index.html:48
+msgid "View details"
+msgstr ""
+
+#: templates/index.html:54
+msgid "Tools and Maps"
+msgstr ""
+
+#: templates/index.html:55
+msgid ""
+"For citizens and decision makers to learn more about climate change and it's "
+"impacts."
+msgstr ""
+
+#: templates/index.html:57
+msgid "Interactive maps"
+msgstr ""
+
+#: templates/index.html:58
+msgid "Simulations"
+msgstr ""
+
+#: templates/index.html:60
+msgid "View interactive simulations"
+msgstr ""
+
+#: templates/index.html:64
+msgid "Raw Data"
+msgstr ""
+
+#: templates/index.html:65
+msgid ""
+"Find and download the raw data used in many of the country's research "
+"initiatives."
+msgstr ""
+
+#: templates/index.html:70
+msgid "Search"
+msgstr ""
+
+#: templates/index.html:73
+msgid "View all layers"
+msgstr ""
+
+#: templates/index.html:78
+msgid "Who are we?"
+msgstr ""
+
+#: templates/index.html:79
+msgid "What do we do?"
+msgstr ""
+
+#: templates/index.html:80
+msgid "FAQ"
+msgstr ""
+
+#: templates/search_base.html:4
+msgid "Search Data"
+msgstr ""
+
+#: templates/search_base.html:67
+msgid ""
+"Click the <b>+</b> on any row to show layer metadata or download in PDF, "
+"KML, GeoTIFF, or SHP."
+msgstr ""
+
+#: templates/search_base.html:68
+msgid "To bookmark your current search use this"
+msgstr ""
+
+#: templates/search_base.html:68
+msgid "permalink"
+msgstr ""
+
+#: templates/search_base.html:75
+msgid "Refine Search"
+msgstr ""
+
+#: templates/search_base.html:77
+msgid "By area"
+msgstr ""
+
+#: templates/search_base.html:78
+msgid "Limit the search to data that includes features in the displayed area."
+msgstr ""
+
+#: templates/search_base.html:85
+msgid "Selected Data"
+msgstr ""
+
+#: templates/search_base.html:86
+msgid "Use the checkboxes in the search results to add data to your selection."
+msgstr ""
+
+#: templates/search_base.html:92 templates/profiles/profile_detail.html:17
+msgid "Create a new map"
+msgstr ""
+
+#: templates/search_base.html:93 templates/search_base.html.py:96
+msgid "Export selected"
+msgstr ""
+
+#: templates/avatar/add.html:6 templates/profiles/edit_profile.html:7
+msgid "Your current avatar: "
+msgstr ""
+
+#: templates/avatar/add.html:9 templates/profiles/edit_profile.html:10
+msgid "You haven't uploaded an avatar yet. Please upload one now."
+msgstr ""
+
+#: templates/avatar/add.html:13 templates/profiles/edit_profile.html:22
+msgid "Upload New Image"
+msgstr ""
+
+#: templates/impact/calculator.html:3
+msgid "Risiko Calculator"
+msgstr ""
+
+#: templates/maps/layer.html:148
+msgid "No abstract for this layer."
+msgstr ""
+
+#: templates/maps/layer.html:156
+msgid "Type"
+msgstr ""
+
+#: templates/maps/layer.html:157
+msgid "Keywords"
+msgstr ""
+
+#: templates/maps/layer.html:158
+msgid "Edition"
+msgstr ""
+
+#: templates/maps/layer.html:159
+msgid "Topic Category"
+msgstr ""
+
+#: templates/maps/layer.html:162
+msgid "Citation"
+msgstr ""
+
+#: templates/maps/layer.html:168
+msgid "Uploaded by"
+msgstr ""
+
+#: templates/maps/layer.html:175
+msgid "Point of Contact"
+msgstr ""
+
+#: templates/maps/layer.html:181
+msgid "Name"
+msgstr ""
+
+#: templates/maps/layer.html:182
+msgid "Email"
+msgstr ""
+
+#: templates/maps/layer.html:183
+msgid "Organization"
+msgstr ""
+
+#: templates/maps/layer.html:184
+msgid "Position"
+msgstr ""
+
+#: templates/maps/layer.html:185
+msgid "Voice"
+msgstr ""
+
+#: templates/maps/layer.html:186
+msgid "Fax"
+msgstr ""
+
+#: templates/maps/layer.html:187
+msgid "Delivery"
+msgstr ""
+
+#: templates/maps/layer.html:188
+msgid "Area"
+msgstr ""
+
+#: templates/maps/layer.html:189
+msgid "Zip Code"
+msgstr ""
+
+#: templates/maps/layer.html:190
+msgid "Country"
+msgstr ""
+
+#: templates/maps/layer.html:198
+msgid "Attributes"
+msgstr ""
+
+#: templates/maps/layer.html:204
+msgid "Supplemental Information"
+msgstr ""
+
+#: templates/maps/layer.html:210
+msgid "Data Quality Statement"
+msgstr ""
+
+#: templates/maps/layer.html:217
+msgid "Bounding Box"
+msgstr ""
+
+#: templates/maps/layer.html:223
+msgid "Native SRS"
+msgstr ""
+
+#: templates/maps/layer.html:224
+msgid "No SRS specified."
+msgstr ""
+
+#: templates/maps/layer.html:234
+msgid "Download"
+msgstr ""
+
+#: templates/maps/layer.html:235
+msgid ""
+"Below are links to download the raw data and metadata for this layer. The "
+"most used download format is colored in blue."
+msgstr ""
+
+#: templates/maps/layer.html:242
+msgid "Metadata"
+msgstr ""
+
+#: templates/maps/layer.html:247
+msgid "No metadata links provided for this data."
+msgstr ""
+
+#: templates/maps/layer.html:251
+msgid "Maps"
+msgstr ""
+
+#: templates/maps/layer.html:253
+msgid "The following maps use this data set"
+msgstr ""
+
+#: templates/maps/layer.html:260
+msgid "This layer is not currently used in any maps."
+msgstr ""
+
+#: templates/maps/layer.html:267
+msgid "Styles"
+msgstr ""
+
+#: templates/maps/layer.html:268
+msgid ""
+"The following styles are associated with this data set. Click on a style "
+"name to view or edit the style."
+msgstr ""
+
+#: templates/maps/layer.html:281
+msgid "Default style:"
+msgstr ""
+
+#: templates/maps/layer.html:300
+msgid "Manage"
+msgstr ""
+
+#: templates/maps/layer.html:303
+msgid "Edit metadata"
+msgstr ""
+
+#: templates/maps/layer.html:304
+msgid "Replace raw data"
+msgstr ""
+
+#: templates/maps/layer.html:305
+msgid "Generate thumbnail"
+msgstr ""
+
+#: templates/maps/layer.html:308
+msgid "Edit Permissions"
+msgstr ""
+
+#: templates/maps/layer.html:311
+msgid "Delete this layer"
+msgstr ""
+
+#: templates/maps/layer.html:320 templates/maps/layer_upload.html:42
+msgid "Permissions"
+msgstr ""
+
+#: templates/maps/layer_describe.html:12
+#: templates/maps/layer_upload_step2.html:48
+msgid "Editing details for "
+msgstr ""
+
+#: templates/maps/layer_describe.html:24
+msgid "Update"
+msgstr ""
+
+#: templates/maps/layer_replace.html:4 templates/maps/layer_replace.html:41
+msgid "Update Layer"
+msgstr ""
+
+#: templates/maps/layer_replace.html:42
+msgid "This form allows you to update the data for this layer."
+msgstr ""
+
+#: templates/maps/layer_replace.html:43
+msgid ""
+"\n"
+"If the new dataset omits attributes that were included in the previous "
+"version,\n"
+"or changes their types, then existing styles for the layer may not work.\n"
+"Please check your maps if the new data includes such changes.  "
+"Additionally,\n"
+"updated data must be the same format as the data already in place, e.g.\n"
+msgstr ""
+
+#: templates/maps/layer_replace.html:51
+msgid "Select a layer data file and submit the form to begin the transfer."
+msgstr ""
+
+#: templates/maps/layer_replace.html:53
+msgid "This action affects the following maps:"
+msgstr ""
+
+#: templates/maps/layer_replace.html:59
+msgid "No maps are using this layer."
+msgstr ""
+
+#: templates/maps/layer_replace.html:65
+msgid "Supported Formats"
+msgstr ""
+
+#: templates/maps/layer_upload.html:4
+msgid "Upload Layer"
+msgstr ""
+
+#: templates/maps/layer_upload.html:15
+msgid "Add data"
+msgstr ""
+
+#: templates/maps/layer_upload_step2.html:4
+msgid "Upload Layer Step 2"
+msgstr ""
+
+#: templates/maps/layer_upload_step2.html:70
+msgid "This data does not have a time attribute"
+msgstr ""
+
+#: templates/maps/layer_upload_step2.html:75
+msgid "Existing Time Attribute"
+msgstr ""
+
+#: templates/maps/layer_upload_step2.html:81
+msgid "Convert Text Attribute"
+msgstr ""
+
+#: templates/maps/layer_upload_step2.html:82
+msgid "Date Format"
+msgstr ""
+
+#: templates/maps/layer_upload_step2.html:95
+msgid "Convert Number (As Year)"
+msgstr ""
+
+#: templates/maps/layer_upload_step2.html:121
+msgid "Next"
+msgstr ""
+
+#: templates/maps/view.html:4
+msgid "Map Viewer"
+msgstr ""
+
+#: templates/profiles/edit_profile.html:16
+msgid "Choose new Default"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:14
+msgid "Actions"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:16
+msgid "Upload new data"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:19
+msgid "Settings"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:21
+msgid "Edit profile information"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:29
+msgid "Maps & Data"
+msgstr ""
+
+#: templates/registration/logged_out.html:8
+msgid "Thanks for spending some quality time with the GeoNode today."
+msgstr ""
+
+#: templates/registration/logged_out.html:10
+msgid "Log in again"
+msgstr ""
+
+#: templates/registration/logout.html:5
+msgid "Logged out"
+msgstr ""

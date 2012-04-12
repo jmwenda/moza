@@ -1,0 +1,13 @@
+{% extends "registration/base.html" %}
+{% load i18n %}
+
+{% block main %}
+<div class="container-fluid">
+<div class="well">
+<h1>Logged out</h1>
+<p>{% trans "Thanks for spending some quality time with the GeoNode today." %}</p>
+
+<p><a href="/accounts/login">{% trans 'Log in again' %}</a></p>
+</div>
+</div>
+{% endblock %}

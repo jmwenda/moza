@@ -1,0 +1,576 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-18 14:01-0600\n"
+"PO-Revision-Date: 2012-01-23 09:53\n"
+"Last-Translator: Fernanda Zermoglio The World Bank <fernandazermoglio@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"X-Translated-Using: django-rosetta 0.6.4\n"
+
+#: templates/base.html:200
+msgid "Mozambique Adaptation"
+msgstr "Adaptação de Moçambique"
+
+#: templates/base.html:202
+msgid "Vulnerability"
+msgstr "Vulnerabilidade"
+
+#: templates/base.html:203
+msgid "Adaptation"
+msgstr "Adaptação"
+
+#: templates/base.html:204 templates/index.html:46
+msgid "Resources"
+msgstr "Recursos"
+
+#: templates/base.html:205 templates/maps/layer.html:236
+msgid "Data"
+msgstr "Dados"
+
+#: templates/base.html:206
+msgid "Tools"
+msgstr "Ferramentas"
+
+#: templates/base.html:208 templates/index.html:76
+msgid "About"
+msgstr "Sobre"
+
+#: templates/base.html:230
+msgid "Upload data"
+msgstr "Carregar dados"
+
+#: templates/base.html:231
+msgid "Translate site"
+msgstr "Traduzir página de internet"
+
+#: templates/base.html:232
+msgid "Admin site"
+msgstr "Administrar página de internet"
+
+#: templates/base.html:235
+msgid "Change password"
+msgstr "Alterar a senha"
+
+#: templates/base.html:236
+msgid "Log out"
+msgstr "Sair"
+
+#: templates/base.html:245
+msgid "Username"
+msgstr "Usuário"
+
+#: templates/base.html:246
+msgid "Password"
+msgstr "Senha"
+
+#: templates/base.html:248
+msgid "Sign in"
+msgstr "Entrar"
+
+#: templates/index.html:36
+msgid "Impacts and Vulnerability"
+msgstr "Impactos e Vulnerabilidade"
+
+#: templates/index.html:37
+msgid ""
+"Quickly explore climate projections, impacts and vulnerability "
+"information for your area"
+msgstr ""
+"Explorar rapidamente informação sobre projeções climáticas, impactos e"
+" vulnerabilidade para a sua área"
+
+#: templates/index.html:38 templates/index.html.py:43 templates/index.html:82
+msgid "Learn more"
+msgstr "Saiba mais"
+
+#: templates/index.html:41
+msgid "Adaptation and Opportunities"
+msgstr "Adaptação e Oportunidades"
+
+#: templates/index.html:42
+msgid "Learn and explore options to adapt to climate change"
+msgstr "Aprender e explorar as opções para se adaptar às mudanças climáticas"
+
+#: templates/index.html:47
+msgid "Information, Articles and Links"
+msgstr "Informações, Artigos e Ligações"
+
+#: templates/index.html:48
+msgid "View details"
+msgstr "Ver detalhes"
+
+#: templates/index.html:54 templates/tools.html:39
+msgid "Tools and Maps"
+msgstr "Ferramentas e Mapas"
+
+#: templates/index.html:55
+msgid ""
+"For citizens and decision makers to learn more about climate change and"
+" it's impacts."
+msgstr ""
+"Para os cidadãos e tomadores de decisão saberem mais sobre as mudanças"
+" climáticas e os seus impactos."
+
+#: templates/index.html:57
+msgid "Interactive maps"
+msgstr "Mapas interativos"
+
+#: templates/index.html:58
+msgid "Simulations"
+msgstr "Simulações"
+
+#: templates/index.html:60
+msgid "View interactive simulations"
+msgstr "Ver simulações interativas"
+
+#: templates/index.html:64 templates/search_base.html:63
+msgid "Raw Data"
+msgstr "Dados em bruto"
+
+#: templates/index.html:65
+msgid ""
+"Find and download the raw data used in many of the country's research "
+"initiatives."
+msgstr ""
+"Localizar e baixar os dados brutos usados ​​em muitas das iniciativas "
+"de pesquisa do país."
+
+#: templates/index.html:70
+msgid "Search"
+msgstr "Pesquisa"
+
+#: templates/index.html:73
+msgid "View all layers"
+msgstr "Ver todas as camadas"
+
+#: templates/index.html:78
+msgid "Who are we?"
+msgstr "Quem somos?"
+
+#: templates/index.html:79
+msgid "What do we do?"
+msgstr "O que fazemos?"
+
+#: templates/index.html:80
+msgid "FAQ"
+msgstr "Perguntas Frequentes"
+
+#: templates/search_base.html:4
+msgid "Search Data"
+msgstr "Busca de dados"
+
+#: templates/search_base.html:64
+msgid "Search for geospatial data in raw formats."
+msgstr "Procurar dados geoespaciais em formatos brutos"
+
+#: templates/search_base.html:67
+msgid ""
+"Click the <b>+</b> on any row to show layer metadata or download in "
+"PDF, KML, GeoTIFF, or SHP."
+msgstr ""
+"Clique no <b> + </ b> em qualquer linha para mostrar camada metadados "
+"ou baixar em PDF, KML, GeoTIFF, ou SHP."
+
+#: templates/search_base.html:68
+msgid "To bookmark your current search use this"
+msgstr "Para marcar sua actual busca utilize este"
+
+#: templates/search_base.html:68
+msgid "permalink"
+msgstr "permalink"
+
+#: templates/search_base.html:75
+msgid "Refine Search"
+msgstr "Detalhar a pesquisa"
+
+#: templates/search_base.html:77
+msgid "By area"
+msgstr "Por área"
+
+#: templates/search_base.html:78
+msgid "Limit the search to data that includes features in the displayed area."
+msgstr ""
+"Limitar a pesquisa a dados que inccluam as características na área "
+"exibida"
+
+#: templates/search_base.html:85
+msgid "Selected Data"
+msgstr "Dados seleccionados"
+
+#: templates/search_base.html:86
+msgid "Use the checkboxes in the search results to add data to your selection."
+msgstr ""
+"Utilize as caixas de verificação nos resultados da pesquisa para "
+"adicionar dados à sua selecção"
+
+#: templates/search_base.html:92 templates/profiles/profile_detail.html:17
+msgid "Create a new map"
+msgstr "Criar um novo mapa"
+
+#: templates/search_base.html:93 templates/search_base.html.py:96
+msgid "Export selected"
+msgstr "Exportar selecionados"
+
+#: templates/tools.html:16
+msgid "Latest Maps"
+msgstr "Mapas recentes"
+
+#: templates/tools.html:27
+msgid "No maps have been created."
+msgstr "Não foram criados mapas"
+
+#: templates/tools.html:27
+msgid "Why not"
+msgstr "Por que não"
+
+#: templates/tools.html:27
+msgid "create one?"
+msgstr "criar um?"
+
+#: templates/tools.html:30
+msgid "Create your own"
+msgstr "Criar o seu próprio"
+
+#: templates/tools.html:31
+msgid ""
+"You can use the interactive tools to create your own map focused on a "
+"topic or a location."
+msgstr ""
+"Pode usar as ferramentas interativas para criar seu próprio mapa "
+"focado num tópico ou localização"
+
+#: templates/tools.html:32
+msgid "New map"
+msgstr "Novo mapa"
+
+#: templates/tools.html:51
+msgid "Exposure to Drought - UNEP/GRID"
+msgstr "Exposição à seca - UNEP/GRID"
+
+#: templates/tools.html:52
+msgid "Number of people exposed to drought per year."
+msgstr "Número de pessoas expostas à seca por ano."
+
+#: templates/avatar/add.html:6 templates/profiles/edit_profile.html:7
+msgid "Your current avatar: "
+msgstr "O seu actual avatar:"
+
+#: templates/avatar/add.html:9 templates/profiles/edit_profile.html:10
+msgid "You haven't uploaded an avatar yet. Please upload one now."
+msgstr "Ainda não carregou um avatar. Por favor carregue um agora."
+
+#: templates/avatar/add.html:13 templates/profiles/edit_profile.html:22
+msgid "Upload New Image"
+msgstr "Carregar nova imagem"
+
+#: templates/impact/calculator.html:3
+msgid "Risiko Calculator"
+msgstr "Calculadora Risiko"
+
+#: templates/maps/layer.html:148
+msgid "No abstract for this layer."
+msgstr "Não há resumo para esta camada"
+
+#: templates/maps/layer.html:156
+msgid "Type"
+msgstr "Tipo"
+
+#: templates/maps/layer.html:157
+msgid "Keywords"
+msgstr "Palavras chave"
+
+#: templates/maps/layer.html:158
+msgid "Edition"
+msgstr "Edição"
+
+#: templates/maps/layer.html:159
+msgid "Topic Category"
+msgstr "Categoria de Tópico"
+
+#: templates/maps/layer.html:162
+msgid "Citation"
+msgstr "Citação"
+
+#: templates/maps/layer.html:168
+msgid "Uploaded by"
+msgstr "Carregado por"
+
+#: templates/maps/layer.html:175
+msgid "Point of Contact"
+msgstr "Ponto de contacto"
+
+#: templates/maps/layer.html:181
+msgid "Name"
+msgstr "Nome"
+
+#: templates/maps/layer.html:182
+msgid "Email"
+msgstr "Endereço electrónico"
+
+#: templates/maps/layer.html:183
+msgid "Organization"
+msgstr "Organização"
+
+#: templates/maps/layer.html:184
+msgid "Position"
+msgstr "Posição"
+
+#: templates/maps/layer.html:185
+msgid "Voice"
+msgstr "Voz"
+
+#: templates/maps/layer.html:186
+msgid "Fax"
+msgstr "Fax"
+
+#: templates/maps/layer.html:187
+msgid "Delivery"
+msgstr "Entrega"
+
+#: templates/maps/layer.html:188
+msgid "Area"
+msgstr "Área"
+
+#: templates/maps/layer.html:189
+msgid "Zip Code"
+msgstr "Código Postal"
+
+#: templates/maps/layer.html:190
+msgid "Country"
+msgstr "País"
+
+#: templates/maps/layer.html:198
+msgid "Attributes"
+msgstr "Atributos"
+
+#: templates/maps/layer.html:204
+msgid "Supplemental Information"
+msgstr "Informação Suplementar"
+
+#: templates/maps/layer.html:210
+msgid "Data Quality Statement"
+msgstr "Declaração de Qualidade de Dados"
+
+#: templates/maps/layer.html:217
+msgid "Bounding Box"
+msgstr "Caixa de Ligação"
+
+#: templates/maps/layer.html:223
+msgid "Native SRS"
+msgstr "SRS Nativo"
+
+#: templates/maps/layer.html:224
+msgid "No SRS specified."
+msgstr "Não foi especificado um SRS"
+
+#: templates/maps/layer.html:234
+msgid "Download"
+msgstr "Baixar"
+
+#: templates/maps/layer.html:235
+msgid ""
+"Below are links to download the raw data and metadata for this layer. "
+"The most used download format is colored in blue."
+msgstr ""
+"Abaixo estão as ligações para baixar os dados em bruto ​​e metadados "
+"para esta camada. O formato mais utilizadas de descarregamento é "
+"colorido a azul."
+
+#: templates/maps/layer.html:242
+msgid "Metadata"
+msgstr "Metadados"
+
+#: templates/maps/layer.html:247
+msgid "No metadata links provided for this data."
+msgstr "Não são fornecidas ligações de metadados para estes dados"
+
+#: templates/maps/layer.html:251
+msgid "Maps"
+msgstr "Mapas"
+
+#: templates/maps/layer.html:253
+msgid "The following maps use this data set"
+msgstr "Os mapas seguintes usam este conjunto de dados"
+
+#: templates/maps/layer.html:260
+msgid "This layer is not currently used in any maps."
+msgstr ""
+"Esta camada não está a ser presentemente utilizada em qualquer dos "
+"mapas"
+
+#: templates/maps/layer.html:267
+msgid "Styles"
+msgstr "Estilos"
+
+#: templates/maps/layer.html:268
+msgid ""
+"The following styles are associated with this data set. Click on a "
+"style name to view or edit the style."
+msgstr ""
+"Os seguintes estilos estão associados com este conjunto de dados. "
+"Pressione sobre um nome de estilo para ver ou editar o estilo."
+
+#: templates/maps/layer.html:281
+msgid "Default style:"
+msgstr "Estilo pré-definido"
+
+#: templates/maps/layer.html:300
+msgid "Manage"
+msgstr "Gerir"
+
+#: templates/maps/layer.html:303
+msgid "Edit metadata"
+msgstr "Editar metadados"
+
+#: templates/maps/layer.html:304
+msgid "Replace raw data"
+msgstr "Substituir os dados em bruto"
+
+#: templates/maps/layer.html:305
+msgid "Generate thumbnail"
+msgstr "Gerar miniaturas"
+
+#: templates/maps/layer.html:308
+msgid "Edit Permissions"
+msgstr "Editar permissões"
+
+#: templates/maps/layer.html:311
+msgid "Delete this layer"
+msgstr "Excluir esta camada"
+
+#: templates/maps/layer.html:320 templates/maps/layer_upload.html:42
+msgid "Permissions"
+msgstr "Permissões"
+
+#: templates/maps/layer_describe.html:12
+#: templates/maps/layer_upload_step2.html:48
+msgid "Editing details for "
+msgstr "Editar detalhes para"
+
+#: templates/maps/layer_describe.html:24
+msgid "Update"
+msgstr "Actualizar"
+
+#: templates/maps/layer_replace.html:4 templates/maps/layer_replace.html:41
+msgid "Update Layer"
+msgstr "Actualizar camada"
+
+#: templates/maps/layer_replace.html:42
+msgid "This form allows you to update the data for this layer."
+msgstr "Este formulario permite-lhe actualizar os dados para esta camada."
+
+#: templates/maps/layer_replace.html:43
+msgid ""
+"\n"
+"If the new dataset omits attributes that were included in the previous version,\n"
+"or changes their types, then existing styles for the layer may not work.\n"
+"Please check your maps if the new data includes such changes.  Additionally,\n"
+"updated data must be the same format as the data already in place, e.g.\n"
+msgstr ""
+"\n"
+"Se o novo conjunto de dados omitir atributos que foram incluídos na versão anterior ou mudar os seus tipos, então os estilos existentes para a camada poderão não funcionar. Por favor verifique nos seus mapas se os novos dados incluem tais mudanças. Adicionalmente, os dados carregados devem ser do mesmo formato que os dados já carregados, p.e.\n"
+
+#: templates/maps/layer_replace.html:51
+msgid "Select a layer data file and submit the form to begin the transfer."
+msgstr ""
+"Seleccionar um ficheiro de camada de dados e submeter o formulário "
+"para começar a transferência"
+
+#: templates/maps/layer_replace.html:53
+msgid "This action affects the following maps:"
+msgstr "Esta acção afecta os seguintes mapas"
+
+#: templates/maps/layer_replace.html:59
+msgid "No maps are using this layer."
+msgstr "Não estão a ser utillizados mapas nesta camada."
+
+#: templates/maps/layer_replace.html:65
+msgid "Supported Formats"
+msgstr "Formatos suportados"
+
+#: templates/maps/layer_upload.html:4
+msgid "Upload Layer"
+msgstr "Carregar camada"
+
+#: templates/maps/layer_upload.html:15
+msgid "Add data"
+msgstr "Adicionar dados"
+
+#: templates/maps/layer_upload_step2.html:4
+msgid "Upload Layer Step 2"
+msgstr "Carregar camada Passo 2"
+
+#: templates/maps/layer_upload_step2.html:70
+msgid "This data does not have a time attribute"
+msgstr "Estes dados não têm um atributo temporal"
+
+#: templates/maps/layer_upload_step2.html:75
+msgid "Existing Time Attribute"
+msgstr "Atributo temporal existente"
+
+#: templates/maps/layer_upload_step2.html:81
+msgid "Convert Text Attribute"
+msgstr "Converter atributo de texto"
+
+#: templates/maps/layer_upload_step2.html:82
+msgid "Date Format"
+msgstr "Formato de Data"
+
+#: templates/maps/layer_upload_step2.html:95
+msgid "Convert Number (As Year)"
+msgstr "Converter número (como Ano)"
+
+#: templates/maps/layer_upload_step2.html:121
+msgid "Next"
+msgstr "Próximo"
+
+#: templates/maps/view.html:4
+msgid "Map Viewer"
+msgstr "Visualizador de Mapa"
+
+#: templates/profiles/edit_profile.html:16
+msgid "Choose new Default"
+msgstr "Escolher nova pré-definição"
+
+#: templates/profiles/profile_detail.html:14
+msgid "Actions"
+msgstr "Acções"
+
+#: templates/profiles/profile_detail.html:16
+msgid "Upload new data"
+msgstr "Carregar novos dados"
+
+#: templates/profiles/profile_detail.html:19
+msgid "Settings"
+msgstr "Definições"
+
+#: templates/profiles/profile_detail.html:21
+msgid "Edit profile information"
+msgstr "Editar informação sobre o perfil"
+
+#: templates/profiles/profile_detail.html:29
+msgid "Maps & Data"
+msgstr "Mapas e Dados"
+
+#: templates/registration/logged_out.html:8
+msgid "Thanks for spending some quality time with the GeoNode today."
+msgstr "Obrigado por passar algum tempo de qualidade hoje com o GeoNode"
+
+#: templates/registration/logged_out.html:10
+msgid "Log in again"
+msgstr "Entrar de novo"
+
+#: templates/registration/logout.html:5
+msgid "Logged out"
+msgstr "Saiu do programa"

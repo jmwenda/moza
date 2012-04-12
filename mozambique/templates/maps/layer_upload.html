@@ -1,0 +1,46 @@
+{% extends "maps/data_base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "Upload Layer"  %} - {{ block.super }} {% endblock %}
+
+{% block head %}
+{% include "geonode/ext_header.html" %}
+{% include "geonode/app_header.html" %}
+{% include "geonode/geo_header.html" %}
+<link rel="stylesheet" type="text/css" href="{{ GEONODE_CLIENT_LOCATION }}theme/ux/fileuploadfield/fileuploadfield.css"/>
+{{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <h2>{% trans "Add data" %}</h2>
+  {% if errors %}
+    <div id="errors">
+      {% for error in errors %}
+        <div>{{ error }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div id="upload_form">
+  </div>
+<script type="text/javascript" src="{{ STATIC_URL }}script/layer_upload.js"></script>
+<script type="text/javascript">
+{% autoescape off %}
+setup({
+    csrf_token : "{{ csrf_token }}",
+    form_target : "{% url geonode.maps.views.upload_layer %}",
+    userLookup : "{% url geonode.views.ajax_lookup %}"
+});
+{% endautoescape %}
+</script>
+
+{% endblock %}
+
+
+{% block sidebar %}
+<div class="well">
+<h3>{%trans "Permissions"  %}</h3>
+
+<div id="permissions_form"></div>
+</div>
+{% endblock %}

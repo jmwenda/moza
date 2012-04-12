@@ -1,0 +1,30 @@
+{% extends "registration/base.html" %}
+{% block title %} GeoNode Login - {{ block.super }} {% endblock %}
+{% block main %}
+ <div class="container well">
+  <h1>GeoNode Login</h1>
+
+   <form action="{% url django.contrib.auth.views.login %}"
+          method="post" accept-charset="utf-8"  class="form-stacked span6">
+       <fieldset>
+
+  {% if form.errors %}
+  <div class="alert-message error">
+  <p>Your <strong>username</strong> and <strong>password</strong> didn't match. Please try again.</p>
+</div>
+
+  {% endif %}
+       {% csrf_token %}
+      <div class="clearfix">
+      <input class="input xlarge" type="text" id="username"
+             name="username" placeholder="Username">
+      </div>
+      <div class="clearfix">
+      <input class="input xlarge" type="password" id="username"
+             name="password" placeholder="Password">
+      </div>
+      </fieldset>
+      <button class="btn primary large pull-right" type="submit">Sign in</button>
+   </form>
+</div>
+{% endblock %}

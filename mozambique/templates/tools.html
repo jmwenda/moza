@@ -1,0 +1,108 @@
+{% extends "maps/tools_base.html" %}
+{% load i18n %}
+{% block head %}
+{{ block.super }}
+<style>
+#droughtmap p, #droughtmap h4, #droughtmap iframe, #droughtmap a img{
+   margin-left: 0px;
+}
+iframe {
+   border: 5px #404040 solid;
+}
+#riskmap a{
+margin-left: 150px;
+}
+.risiko{
+margin-left: 325px;
+}
+.sidebar h5{
+line-height:20px;
+}
+</style>
+{% include "geonode/ext_header.html" %}
+{% include "geonode/app_header.html" %}
+{{ block.super }}
+<script type="text/javascript">
+Ext.onReady(function(){
+
+{% autoescape off %}
+  var submitForm = function() {
+      Ext.query('#search_form form')[0].submit();
+  };
+  var searchButton = new Ext.Button({renderTo: 'submit_search', text: '{% trans "Search" %}',
+                                     handler: submitForm});
+  var searchInput = new Ext.form.TextField({applyTo: 'search_query', width: 350});
+{% endautoescape %}
+
+});
+</script>
+
+{%endblock%}
+{% block sidebar %}
+<div class="well">
+<h2>{% trans "Latest Maps" %}</h2>
+<ol>
+{% for object in object_list %}
+<li>
+<h5><a href="{{ object.get_absolute_url }}/view">{{ object.title }}</a></h5>
+<p>{{ object.abstract }}</p>
+    <a href="{{ object.get_absolute_url }}/view">
+      <img class="thumbnail" src="{{ STATIC_URL }}/theme/img/mapscreens/{{object.id}}.png" width="200" alt="">
+    </a>
+</li>
+{% empty %}
+<p>{% trans "No maps have been created." %} {% trans "Why not" %}<a href="/maps/new">{% trans "create one?" %}</a>.</p>
+{% endfor %}
+</ol>
+<h2>{% trans "Create your own" %}</h2>
+<p>{% trans "You can use the interactive tools to create your own map focused on a topic or a location." %}
+<a class="btn large primary" href="/maps/new">{% trans "New map" %}</a></p>
+
+</div>
+{% endblock %}
+{% block content %}
+<div id="main" class="container">
+  <div class="well">
+    <h1>{% trans "Tools and Maps" %}</h1>
+  </div>
+ <div id="grid" class="well">
+<div class="row">
+<div class="span6"><h4>{% trans "Banco de Dados perda Desastre"%}</h4>
+</div>
+<div class="span6"><h4>{% trans "Calculadora de Risco" %}</h4>
+</div>
+</div>
+  <ul class="media-grid">
+   <li id="droughtmap">
+    <a href="http://62.2.195.177/DesInventar/"><img style="border:5px #404040 solid;" src="{{ STATIC_URL }}/theme/img/gripscreen.png" height='230' alt=""></a>
+
+</li>
+ <li id="droughtmap">
+<a href="/impact"><img src="{{ STATIC_URL }}/theme/img/risk.png" height='230' style="border:5px #404040 solid;align:center;"></a>
+</li>
+  </ul>
+  <div id="search_form" class="block">
+    <h2>{% trans "Search" %} <span class="subtitle">{% trans "for maps" %}</span></h2>
+
+    <form action="{% url maps_search %}" method="POST">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>
+            <input type="text" id="search_query" name="q" />
+          </td>
+          <td>
+            <div id="submit_search"></div>
+          </td>
+        </tr>
+      </table>
+      <p>
+        <a href="{% url maps_search %}">{% trans "All Maps" %}</a> |
+        <a href="{% url maps_search %}?sort=last_modified&dir=DESC">{% trans "New Maps" %}</a>
+      </p>
+    </form>
+  </div>
+
+ </div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "maps/tools_base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "Map Viewer" %} - {{ block.super }} {% endblock %}
+
+{% block head %}
+{{ block.super }}
+{% include "geonode/ext_header.html" %}
+<link rel="stylesheet" type="text/css" href="{{ GEONODE_CLIENT_LOCATION }}externals/geoext/resources/css/gxtheme-gray.css">
+{% include "geonode/app_header.html" %}
+{% include "geonode/geo_header.html" %}
+<link rel="stylesheet" type="text/css" href="{{ GEONODE_CLIENT_LOCATION }}theme/ux/colorpicker/color-picker.ux.css" />
+<script src="{{ GEONODE_CLIENT_LOCATION }}script/PrintPreview.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ GEONODE_CLIENT_LOCATION }}externals/PrintPreview/resources/css/printpreview.css" />
+<script src="{{GEOSERVER_BASE_URL}}pdf/info.json?var=printCapabilities" type="text/javascript"></script>
+<script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
+<script type="text/javascript" src="{% url lang %}"></script>
+
+<script type="text/javascript">
+var app = new GeoExplorer();
+</script>
+
+<style>
+/* Leave room for the topnav */
+#paneltbar{
+    margin-top: 40px;
+}
+</style>
+
+{% endblock %}
+
+{% block main %}
+<div id="header-wrapper">
+  {{ block.super }}
+</div>
+{% endblock %}

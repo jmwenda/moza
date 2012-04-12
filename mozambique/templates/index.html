@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {{ block.super }} {% endblock %}
+
+{% block head %}
+{{ block.super }}
+<style>
+/* Override some defaults */
+html, body {
+    background-color: #eee;
+    background-image: url("{{ STATIC_URL }}theme/background/background7.jpg");
+    background-repeat: no-repeat;
+}
+
+.niceblock{
+  height: 250px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: url({{ STATIC_URL }}/theme/wash-white-30.png) transparent;
+  border: 1px solid white;
+  color: #eee;
+ 
+}
+.niceblock h2{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 36px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.niceblock li {
+  color: #eee;
+}
+
+.container {
+  width: 1020px;
+}
+
+</style>
+{% endblock %}
+
+{% block main %}
+<div id="main" class="container">
+    <header class="jumbotron masthead" id="overview">
+      <div class="inner">
+        <div class="container">
+          <div class="row">
+            <div class="span5 niceblock">
+               <h2>{% trans "Impacts and Vulnerability" %}</h2>
+               <p>{% trans "Quickly explore climate projections, impacts and vulnerability information for your area" %}</p>
+               <p><a class="btn pull-right" href="{% url vulnerability %}">{% trans "Learn more" %} &raquo;</a></p>
+            </div>
+            <div class="span5 niceblock">
+               <h2>{% trans "Adaptation and Opportunities" %}</h2>
+               <p>{% trans "Learn and explore options to adapt to climate change" %}</p>
+               <p><a class="btn pull-right" href="{% url adaptation %}">{% trans "Learn more" %} &raquo;</a></p>
+            </div>
+            <div class="span5 niceblock">
+               <h2>{% trans "Resources" %}</h2>
+               <p>{% trans "Information, Articles and Links" %}</p>
+               <p><a class="btn pull-right" href="{% url resources %}">{% trans "View details" %} &raquo;</a></p>
+            </div>
+ 
+         </div>
+          <div class="row">
+            <div class="span5 niceblock">
+               <h2>{% trans "Tools and Maps" %}</h2>
+               <p>{% trans "For citizens and decision makers to learn more about climate change and it's impacts." %}</p>
+               <ul>
+                <li>{% trans "Interactive maps" %}</li>
+                <li>{% trans "Simulations" %}</li>
+               </ul>
+               <p><a class="btn pull-right" href="{% url tools %}">{% trans "View interactive simulations" %} &raquo;</a></p>
+            </div>
+ 
+             <div class="span5 niceblock">
+               <h2>{% trans "Raw Data" %}</h2>
+                <p>{% trans "Find and download the raw data used in many of the country's research initiatives." %}</p>
+                <p>
+    <form action="{% url search %}" method="POST">
+      {% csrf_token %}
+       <input class="span3" type="text" id="search_query" name="q" />
+       <button class="span2 btn small primary pull-right" type="submit" id="submit_search">{% trans "Search" %}</button>
+    </form>
+               </p>
+	       <p><a class="btn pull-right" href="{% url search %}">{% trans "View all layers" %} &raquo;</a></p>
+            </div>
+           <div class="span5 niceblock">
+               <h2>{% trans "About" %}</h2>
+              <img src="{{ STATIC_URL }}/theme/ingc-logo.jpeg"
+               <ul>
+                 <li>{% trans "Who are we?" %}</li>
+                 <li>{% trans "What do we do?" %}</li>
+                 <li>{% trans "FAQ" %}</li>
+               </ul>
+               <p><a class="btn pull-right" href="{% url about %}">{% trans "Learn more" %} &raquo;</a></p>
+            </div>
+          </div>
+        </div><!-- /container -->
+      </div>
+    </header>
+</div>
+{% endblock %}
